@@ -3,40 +3,79 @@
     border: 0;
     box-sizing: border-box;
 }
-.container-header-main{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-}
-header{
-    width: 15%;
-    height: 100%;
-    background-color: rgb(145, 27, 27);
-}
+/*inizio macro-struttura*/
 main{
-    width: 85%;
-    height: 100%;
+    width: 100vw;
+    height: calc(100vh - 85px);
     display: flex;
-    flex-direction:column;
-}
-.main-top{
-    background-color: rgba(255, 255, 3, 0.418);
-    width: 100%;
-    height: 11%;
-}
-.main-bottom{
-    background-color: rgb(212, 138, 27);
-    width: 100%;
-    height: 89%;
 }
 footer{
-    height: 10vh;
+    height: 85px;
     width: 100%;
     background-color: aqua;
 }
+/*fine macro-struttura*/
+/*inizo struttura di "main"*/
+.left-main{
+    width: 170px;
+    height: 100%;
+    background-color: rgb(145, 27, 27);
+}
+.right-main{
+    width: calc(100% - 170px);
+    height: 100%;
+    
+    flex-direction:column;
+}
+/*fine struttura di main*/
+/*inizio struttura di left-main*/
+.left-main-1-4{
+    height: 85px;
+    position: relative;
+}
+.left-main-2-4{
+
+}
+.left-main-3-4{
+
+}
+.left-main-4-4{
+
+}
+/*fine struttura di left-main*/
+/* inizio contentuto di left-main-1-4 */
+#logo-principale{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    width: 80%;
+}
+/* fine contentuto di left-main-1-4 */
+/* inizio contentuto di left-main-2-4 */
 .logo{
     display: none;
 }
+/* fine contentuto di left-main-2-4 */
+/* inizio contentuto di left-main-3-4 */
+/* fine contentuto di left-main-3-4 */
+/* inizio contentuto di left-main-4-4 */
+/* fine contentuto di left-main-4-4 */
+
+/*inizio struttura di right-main*/
+.right-main-top{
+    background-color: rgba(255, 255, 3, 0.418);
+    width: 100%;
+    height: 85px;
+}
+.right-main-bottom{
+    background-color: rgb(212, 138, 27);
+    width: 100%;
+    height: calc(100% - 85px);
+}
+/*fine struttura di right-main*/
+
+
 /* mobile */
 @media  screen and (max-width: 480px) {
     header{
