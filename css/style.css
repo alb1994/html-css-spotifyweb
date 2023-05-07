@@ -18,7 +18,7 @@ footer{
 .left-main{
     width: 170px;
     height: 100%;
-    background-color: rgb(145, 27, 27);
+    background-color: black;
     padding-left: 10px;
 }
 .right-main{
@@ -68,6 +68,7 @@ footer{
     text-align: center;
     padding-top: 5px;
     display: inline-block;
+    color: black;
 }
 /* fine contentuto di left-main-3-4 */
 /* inizio contentuto di left-main-4-4 */
@@ -83,7 +84,7 @@ hr{
 
 /*inizio struttura di right-main*/
 .right-main-top{
-    background-color: rgba(255, 255, 3, 0.418);
+    background-color: rgb(36, 35, 35);
     width: 100%;
     height: 85px;
     position: relative;
@@ -133,13 +134,19 @@ h6{
     right: 0%;
     transform: translate(0%, -50%);
 }
+a{
+    text-decoration: none;
+}
+.gray{
+    color: gray;
+    display: inline;
+}
 /*inizo struttura di footer*/
 .content-footer{
     width: 100%;
     height: 100%;
     display: flex;
-    color: white;
-    background-color: black;
+    background-color: rgb(26, 20, 20);
 }
 .song{
     width: 30%;
@@ -167,30 +174,85 @@ h6{
 /* inizio macro*/
 .img-song{
     height: 100%;
-    width: 40px;
-    background-color: bisque;
+    width: 50px;
+    position: relative;
 }
 .info-song{
     height: 100%;
-    width: 40px;
-    background-color: rgb(215, 137, 41);
+    width: 50px;
+    position: relative;
+    margin-left: 10px;
 }
 .icon-song{
     height: 100%;
-    width: calc(100% - 80px);
-    background-color: rgb(33, 19, 2);
+    width: calc(100% - 100px);
     display: flex;
+    position: relative;
 }
+
 /* fine macro*/
 .icon-song-1{
     height: 100%;
     width: 20px;
-    background-color: darkkhaki
+    position: relative;
 }
 .icon-song-2{
     height: 100%;
     width: calc(100% - 20px);
-    background-color: rgb(188, 75, 86)
+    position: relative;
+}
+.content-icon-song-1{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+.content-icon-song-2{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(50%, -50%);
+}
+.content-icon-song-1-2-none{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+}
+.icona{
+    color: gray;
+    width: 10px;
+    display: block;
+}
+.icona:hover{
+    color: white;
+}
+#img-footer{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+#ul-song{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+}
+.left-footer-song{
+    font-size: 10px;
+    color: gray;
+    list-style-type: none;
+    padding-top: 0px;
+}
+#ul-song-none{
+    display: none; 
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
 }
 /* fine contenuto song */
 /* inizio contenuto player*/ 
@@ -198,13 +260,11 @@ h6{
 .player-top{
     width: 100%;
     height: 50%;
-    background-color: black;
 }
 .player-bottom{
     width: 100%;
     height: 50%;
-    background-color: rgb(36, 133, 133);
-    display: flex
+    display: flex;
 }
 /* fine macro*/
 #ul-player{
@@ -223,12 +283,32 @@ h6{
     width: calc(100% - 40px);
     height: 100%;
     display: flex;
+    position: relative;
+}
+.minutaggio{
+    margin: 0px 10px 0px 10px;
+    width: calc(100% - 20px);
+    background-color: rgba(128, 128, 128, 0.558);
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    border-radius: 10px;
+    display: flex;
+}
+.column-minutaggio-1{
+    width: 25%;
+    background-color: white;
+    height: 100%;
+}
+.column-minutaggio-2{
+    width: 75%;
+}
+.column-minutaggio-1:hover{
+    background-color: green;
 }
 
-#minutaggio{
-    margin: 0 auto;
-    width: 90%;
-}
 /* fine contenuto player*/ 
 /* inizio contenuto volume*/ 
 
@@ -237,9 +317,31 @@ h6{
     top: 50%;
     right: 0%;
     transform: translate(-8%, -50%);
+    width: 110px;
 }
-#volume{
+.barra-volume{
+    margin: 0px 10px 0px 10px;
     width: 50px;
+    background-color: rgba(128, 128, 128, 0.558);
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    border-radius: 10px;
+    display: flex;
+}
+.column-vol-1:hover{
+    background-color: green;
+}
+.column-vol-1{
+    width: 25%;
+    height: 100%;
+    background-color: white;
+}
+.column-vol-2{
+    width: 75%;
+    height: 100%;
 }
 /* fine contenuto volume*/ 
 
@@ -279,5 +381,26 @@ h6{
     }
     .info-song{
         width: 50%;
+    }
+    .content-info-song-1{
+        display: none;
+    }
+    .content-info-song-1-none{
+        display: block;
+    }
+    #ul-song-none{
+        display: block;
+    }
+    #ul-song{
+        display: none;
+    }
+    .content-icon-song-1{
+        display: none;
+    }
+    .content-icon-song-2{
+        display: none;
+    }
+    .content-icon-song-1-2-none{
+        display: block;
     }
 }
